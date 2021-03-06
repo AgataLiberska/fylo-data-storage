@@ -19,14 +19,43 @@
   
   0 GB
   1000 GB -->
-
-  <div class="storage-container">
-    <div class="storage-track">
-      <div class="storage-progress">
+  <div class="component">
+    <div class="component__main">
+      <div class="component-logo">
+        <img src="/images/logo.svg" alt="Fylo logo">
+      </div>
+      <div class="component__menu">
+        <button type="button" aria-label="Create new document">
+          <img src="/images/icon-document.svg" alt="">
+        </button>
+        <button type="button" aria-label="Create new folder">
+          <img src="/images/icon-folder.svg" alt="">
+        </button>
+        <button type="button" aria-label="Upload files">
+          <img src="/images/icon-upload.svg" alt="">
+        </button>
       </div>
     </div>
-
+    <div class="component__storage">
+      <p class="component__storage__info">
+        You've used <span class="component__storage__used">0 GB</span> of your storage
+      </p>
+      <div class="component__storage__wrapper">
+        <div class="component__storage__track">
+          <div class="component__storage__progress">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="component__storage__number">
+      <span class="component__storage__min">0 GB</span>
+      <span class="component__storage__max">1000 GB</span>
+    </div>
+    <div class="component__storage__modal">
+      
+    </div>
   </div>
+
   
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
