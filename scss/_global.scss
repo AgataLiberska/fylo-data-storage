@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+html {
+    font-size: 100%;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: $darkBlue;
+    background-image: url('/images/bg-mobile.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: regular;
+    color: $paleBlue;
+
+    @include breakpoint-up(large) {
+        background-image: url('/images/bg-desktop.png');
+    }
+}
