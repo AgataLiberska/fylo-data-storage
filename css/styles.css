@@ -22,6 +22,7 @@ body {
           align-items: center;
   min-height: 100vh;
   width: 100vw;
+  background-color: #0F1B3D;
   background-image: url("/images/bg-mobile.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -31,10 +32,32 @@ body {
   color: #DBD9FF;
 }
 
+@media screen and (min-width: 60rem) {
+  body {
+    background-image: url("/images/bg-desktop.png");
+  }
+}
+
 .component {
   min-width: 18rem;
   width: 90%;
   max-width: 34rem;
+}
+
+@media screen and (min-width: 60rem) {
+  .component {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    max-width: 65rem;
+  }
 }
 
 .component__main {
@@ -42,6 +65,13 @@ body {
   padding: 2.5rem;
   background-color: #1E2D69;
   border-radius: 0.625rem 6.25rem 0.625rem 0.625rem;
+}
+
+@media screen and (min-width: 60rem) {
+  .component__main {
+    margin: 0 2rem 0 0;
+    padding-right: 8rem;
+  }
 }
 
 .component__logo {
@@ -100,9 +130,24 @@ body {
   border-radius: 0.625rem;
 }
 
+@media screen and (min-width: 60rem) {
+  .component__storage {
+    padding: 2.5rem;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
 .component__storage__info {
   padding: 0 0 1rem;
   text-align: center;
+}
+
+@media screen and (min-width: 60rem) {
+  .component__storage__info {
+    text-align: left;
+  }
 }
 
 .component__storage__used {
@@ -183,6 +228,32 @@ body {
   text-align: center;
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+@media screen and (min-width: 60rem) {
+  .component__storage__modal {
+    top: unset;
+    left: unset;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    right: 0;
+    bottom: 4rem;
+    border-bottom-right-radius: 0;
+  }
+  .component__storage__modal::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translateY(95%);
+            transform: translateY(95%);
+    height: 1.5rem;
+    width: 1.5rem;
+    border-top: 0.75rem solid #fff;
+    border-right: 0.75rem solid #fff;
+    border-bottom: 0.75rem solid transparent;
+    border-left: 0.75rem solid transparent;
+  }
 }
 
 .component__storage__modal__num {

@@ -3,6 +3,12 @@
     width: 90%;
     max-width: 34rem;
 
+    @include breakpoint-up(large) {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        max-width: 65rem;
+    }
 }
 
 .component__main {
@@ -10,6 +16,11 @@
     padding: 2.5rem;
     background-color: $blue;
     border-radius: 0.625rem 6.25rem 0.625rem 0.625rem;
+
+    @include breakpoint-up(large){
+        margin: 0 2rem 0 0;
+        padding-right: 8rem;
+    }
 }
 
 .component__logo {
@@ -53,11 +64,20 @@
     padding: 2rem 2.5rem 3.25rem;
     background-color: $blue;
     border-radius: 0.625rem;
+
+    @include breakpoint-up(large) {
+        padding: 2.5rem;
+        flex-grow: 1;
+    }
 }
 
 .component__storage__info {
     padding: 0 0 1rem;
     text-align: center;
+
+    @include breakpoint-up(large) {
+        text-align: left;
+    }
 }
 
 .component__storage__used {
@@ -96,7 +116,6 @@
         border-radius: 50%;
         background-color: $white;
         transform: translateY(-50%);
-
     }
 }
 
@@ -123,6 +142,29 @@
     text-align: center;
     font-weight: bold;
     letter-spacing: 1px;
+
+    @include breakpoint-up(large) {
+        top: unset;
+        left: unset;
+        transform: translateX(0);
+        right: 0;
+        bottom: 4rem;
+        border-bottom-right-radius: 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: translateY(95%);
+            height: 1.5rem;
+            width: 1.5rem;
+            border-top: 0.75rem solid $white;
+            border-right: 0.75rem solid $white;
+            border-bottom: 0.75rem solid transparent;
+            border-left: 0.75rem solid transparent;
+        }
+    }
 }
 
 .component__storage__modal__num {
