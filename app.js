@@ -1,6 +1,6 @@
 const progress = {
     max: 1000,
-    current: 100,
+    current: 815,
 
     getMax() {
         return this.max;
@@ -27,10 +27,14 @@ const progress = {
     }
 }
 
-const progressBar = document.querySelector('.storage-progress');
+const progressBar = document.querySelector('.component__storage__progress');
+
+const modal = document.querySelector('.component__storage__modal__num');
 
 const updateProgressBar = () => {
     progressBar.style.width = `${progress.getProportionUsed()*100}%`;
+
+    modal.textContent = `${progress.getRemaining()}`;
 }
 
 updateProgressBar();
