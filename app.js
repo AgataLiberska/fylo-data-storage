@@ -4,11 +4,11 @@ const progress = {
 
     getMax() {
         return this.max;
-    }
+    },
 
     getCurrent() {
         return this.current;
-    }
+    },
     
     add(size) {
         this.current += size;
