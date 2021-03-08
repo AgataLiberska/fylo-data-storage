@@ -174,7 +174,7 @@ body {
   background-image: linear-gradient(to right, #ffa399, #ff4d97);
   height: 100%;
   width: 0%;
-  min-width: 14px;
+  min-width: 0.875rem;
   border-radius: 0.625rem;
   -webkit-transition: width 500ms ease-in-out;
   transition: width 500ms ease-in-out;
@@ -184,7 +184,7 @@ body {
   content: '';
   position: absolute;
   top: 50%;
-  right: 2px;
+  right: 0.125rem;
   height: 0.625rem;
   width: 0.625rem;
   border-radius: 50%;

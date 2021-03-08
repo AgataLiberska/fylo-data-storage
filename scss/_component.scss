@@ -103,7 +103,7 @@
     background-image: linear-gradient(to right, $gradient1, $gradient2);
     height: 100%;
     width: 0%;
-    min-width: 14px;
+    min-width: 0.875rem;
     border-radius: 0.625rem;
     transition: width 500ms ease-in-out;
 
@@ -111,7 +111,7 @@
         content: '';
         position: absolute;
         top: 50%;
-        right: 2px;
+        right: 0.125rem;
         height: 0.625rem;
         width: 0.625rem;
         border-radius: 50%;
