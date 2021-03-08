@@ -11,21 +11,36 @@ html {
 }
 
 body {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     width: 100vw;
-    background-color: $darkBlue;
-    background-image: url('/images/bg-mobile.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: $veryDarkBlue;
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
     font-weight: regular;
     color: $paleBlue;
 
-    @include breakpoint-up(large) {
-        background-image: url('/images/bg-desktop.png');
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 100%;
+        background-image: url('/images/bg-mobile.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+
+        @include breakpoint-up(large) {
+            background-image: url('/images/bg-desktop.png');
+            height: 50%;
+
+        }
     }
+
+
 }
