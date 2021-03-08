@@ -33,7 +33,7 @@ const storage = new Progress(max,current);
 
 If `current` is not passed to the constructor function, it defaults to 0 (here: currently used storage).
 
-*Methods:*
+**Methods:**
 
 * to obtain values, you can use the following:
 ```
@@ -42,6 +42,7 @@ storage.getMax()
 
 storage.getCurrent() 
 // returns current value (here: currently used storage)
+// note that current value can exceed max value
 
 storage.getRemaining() 
 // returns the difference between max and current 
@@ -57,6 +58,7 @@ storage.getProportionUsed()
 storage.add(size)
 // size must be a number
 // adds size value to current value
+// note that current value can exceed max value
 
 storage.remove(size)
 // size must be a number
@@ -79,7 +81,7 @@ In this project, `storage.onChange` is set to the `updateProgressBar` function.
 The challenge was styled Mobile first.
 I included custom hover and focus styles to the buttons in the menu, as well as aria-labels to ensure accessibility.
 
-Font color in the component change when used storage value exceeds available storage.
+Font color in the component changes when used storage value exceeds available storage.
 
 ## Feedback
 
