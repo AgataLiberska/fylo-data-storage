@@ -1,4 +1,45 @@
-import { Progress } from './progress.js';
+class Progress {
+
+    constructor(max, current = 0) {
+        this.max = max;
+        this.current = current;
+    }
+
+    getMax() {
+        return this.max;
+    }
+
+    getCurrent() {
+        return this.current;
+    }
+    
+    add(size) {
+        this.current += size;
+        this.onChange();
+    }
+
+    remove(size) {
+        this.current -= size;
+        this.onChange();
+    }
+
+    getRemaining() {
+        return this.max - this.current;
+    }
+
+    getProportionUsed() {
+        return this.current/this.max;
+    }
+
+    changeMax(max) {
+        this.max = max;
+        this.onChange();
+    }
+
+    onChange() {
+
+    }
+}
 
 const progressBar = document.querySelector('.component__storage__progress');
 const used = document.querySelector('.component__storage__used');
@@ -21,12 +62,6 @@ const updateProgressBar = () => {
 
 const storage = new Progress(1000,815);
 storage.onChange = updateProgressBar
-
-
-
-
-
-
 
 updateProgressBar();
 
