@@ -50,7 +50,7 @@ const updateProgressBar = () => {
     progressBar.style.width = `${storage.getProportionUsed()*100}%`;
     used.textContent = `${storage.getCurrent().toFixed(2)} GB`;
     modal.textContent = `${storage.getRemaining().toFixed(2)}`;
-    max.textContent = `${storage.getMax().toFixed(2)}`;
+    max.textContent = `${storage.getMax()} GB`;
     if (storage.getCurrent() >= storage.getMax()) {
         used.style.color = `hsl(335, 100%, 65%)`;
         modal.style.color = `hsl(335, 100%, 65%)`;
