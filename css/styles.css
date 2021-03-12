@@ -51,7 +51,7 @@ body::after {
 }
 
 .component {
-  min-width: 18rem;
+  min-width: 16rem;
   width: 90%;
   max-width: 34rem;
 }
