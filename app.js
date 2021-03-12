@@ -48,8 +48,10 @@ const max = document.querySelector('.component__storage__max');
 
 const updateProgressBar = () => {
     progressBar.style.width = `${storage.getProportionUsed()*100}%`;
-    used.textContent = `${storage.getCurrent().toFixed(2)} GB`;
-    modal.textContent = `${storage.getRemaining().toFixed(2)}`;
+    used.textContent = 
+        `${storage.getCurrent() % 1 !== 0 ? storage.getCurrent().toFixed(2) : storage.getCurrent()} GB`;
+    modal.textContent = 
+        `${storage.getRemaining() % 1 !== 0 ? storage.getRemaining().toFixed(2) : storage.getRemaining()}`;
     max.textContent = `${storage.getMax()} GB`;
     if (storage.getCurrent() >= storage.getMax()) {
         used.style.color = `hsl(335, 100%, 65%)`;
